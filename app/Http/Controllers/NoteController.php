@@ -56,9 +56,6 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
-        if($note->user_id !== request()->user()->id) {
-            abort(403);
-        }
         return view('note.edit', ['note' => $note] );
     }
 
