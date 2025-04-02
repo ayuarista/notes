@@ -70,7 +70,9 @@ class NoteController extends Controller
         if($note->user_id !== request()->user()->id) {
             abort(403);
         }
-
+        $data = $request->validate([
+            'note' => ['required', 'string']
+        ]);
         $note->update($data);
         return to_route('note.show', $note)->with('message', 'Note was updated');
     }
