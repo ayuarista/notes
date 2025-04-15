@@ -80,12 +80,5 @@ class NoteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Note $note)
-    {
-        if($note->user_id !== request()->user()->id) {
-            abort(403);
-        }
-        $note->delete();
-        return redirect()->route('note.index')->with('message', 'Note was deleted');
-    }
+    
 }
