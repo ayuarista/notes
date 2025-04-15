@@ -37,7 +37,7 @@ class NoteController extends Controller
         ]);
         $data['user_id'] = $request->user()->id;
         $note = Note::create($data);
-        return to_route('note.show', $note)->with('message', 'Note was created');
+        return to_route('note.show', $notes)->with('message', 'Note was created');
     }
 
     /**
@@ -48,7 +48,7 @@ class NoteController extends Controller
         if($note->user_id !== request()->user()->id) {
             abort(403);
         }
-        return view('note.show', ['note' => $note]);
+        return view('note.show', ['note' => $notes]);
     }
 
     /**
@@ -71,7 +71,7 @@ class NoteController extends Controller
             abort(403);
         }
         $data = $request->validate([
-            'note' => ['required', 'string']
+            'note' => ['required', '']
         ]);
         $note->update($data);
         return to_route('note.show', $note)->with('message', 'Note was updated');
