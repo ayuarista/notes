@@ -27,7 +27,6 @@
     width: 300px;
     display: block;
     margin: 0 auto 20px;
-    /* background-color: #fff; */
     padding: 10px 32px;
     border: 1px solid #e0e0e0;
     font-size: 26px;
@@ -40,11 +39,11 @@
     color: #1e1e1e
   }
   .new-note-btn:hover {
-    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
   }
   .new-note-btn:active {
     position: relative;
-    top: 1px;
+    top: 1.2px;
   }
   .notes {
     display: flex;
@@ -53,7 +52,7 @@
     margin: 0 auto;
   }
   .note {
-    background-color: #f0c806;
+    background-color: #f0c904;
     border-radius: 8px;
     width: 280px;
     margin: 0 10px 20px;
