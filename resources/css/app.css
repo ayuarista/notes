@@ -51,11 +51,11 @@
     margin: 0 auto;
   }
   .note {
-    background-color: #f0c904;
+    background-color: #f0c903;
     border-radius: 8px;
     width: 280px;
     margin: 0 10px 20px;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0.1, 0.3);
     transition: all 0.5s;
     cursor: pointer;
     text-decoration: none;
@@ -65,7 +65,7 @@
   .note .note-body {
     outline: 0;
     font-family: 'Caveat', cursive;
-    font-size: 24px;
+    font-size: 24.4px;
     padding: 10px 16px 16px;
   }
   .notes .note:hover {
@@ -101,7 +101,7 @@
   }
 
   .note-buttons .note-cancel-button {
-    padding: 6px 10px;
+    padding: 5px 10px;
     border-radius: 4px;
     background-color: #e0e0e0;
     border: 1px solid #bdbdbd;
@@ -117,7 +117,7 @@
   }
 
   .note-buttons .note-submit-button {
-    padding: 6px 10px;
+    padding: 5px 10px;
     border-radius: 4px;
     color: white;
     background-color: #452900;
@@ -139,7 +139,7 @@
   }
 
   .note-buttons .note-edit-button {
-    padding: 6px 10px;
+    padding: 5px 10px;
     border-radius: 4px;
     color: white;
     background-color: #006bd6;
@@ -154,7 +154,7 @@
     background-color: #0059b3;
   }
   .note-buttons .note-delete-button {
-    padding: 6px 10px;
+    padding: 5px 10px;
     border-radius: 4px;
     color: white;
     background-color: #c93f3f;
