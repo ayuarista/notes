@@ -4,6 +4,9 @@
         <form action="{{ route('note.store') }}" method="POST" class="note">
             @csrf
             <textarea name="note" rows="10" class="note-body" placeholder="Enter your note here"></textarea>
+            @error('note')
+                <div class="note-error">{{ $message }}</div>
+            @enderror
             <div class="note-buttons">
                 <a href="{{ route('note.index') }}" class="note-cancel-button">Cancel</a>
                 <button class="note-submit-button">Submit</button>
