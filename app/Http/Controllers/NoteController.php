@@ -32,12 +32,17 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->validate([
+            'note' => ['required', 'string']
+        ]);
+        $note = Note::create($data);
+        return to_route('note.show', $note)->with('message', 'Note was created');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Note $note)
+      public function show(Note $note)
     {
         if($note->user_id !== request()->user()->id) {
             abort(403);
