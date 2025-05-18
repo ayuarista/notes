@@ -73,6 +73,7 @@ class NoteController extends Controller
             'note' => ['required', 'string']
         ]);
         $note->update($data);
+        return to_route('note.show', $note)->with('message', 'Note was updated');
     }
 
     /**
@@ -84,5 +85,6 @@ class NoteController extends Controller
             abort(403);
         }
         $note->delete();
+        return redirect()->route('note.index')->with('message', 'Note was deleted');
     }
 }
