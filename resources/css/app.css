@@ -23,9 +23,9 @@
     margin: 0 auto;
   }
   .new-note-btn {
-    width: 300px;
+    width: 310px;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 22px;
     padding: 10px 32px;
     border: 1px solid #e0e0e0;
     font-size: 26px;
@@ -42,7 +42,7 @@
   }
   .new-note-btn:active {
     position: relative;
-    top: 1.2px;
+    top: 1.3px;
   }
   .notes {
     display: flex;
